@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>media</title>
+    <style>
+        .main{
+            justify-content: center;
+            margin: auto;
+            /* height: 200px; */
+            width: 30%;
+            /* border: 1px solid black; */
+            text-align: center;
+            margin-bottom: 50px;
+            padding: 20px;
+        }
+        h1{
+            font-size: 40px;
+        }
+        p{
+            color: gray;
+            
+        }
+        .container{
+            width: 60%;
+            /* height: 400px; */
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(auto);
+            margin: auto;
+            /* border: 1px solid black; */
+            display: grid;
+            /* justify-content: space-evenly; */
+            gap: 40px;
+        }
+        .container>div{
+            width: 80%;
+            height: 100%;
+            /* border: 1px solid black; */
+            text-align: center;
+        }
+        .container>div>div{
+            /* border: 1px solid black; */
+            width: 100%;
+            text-align: center;
+        }
+        #green{
+            color: rgb(12,172,122);
+        }
+        #orange{
+            color: rgb(242,127,67);
+        }
+        #blue{
+            color: rgb(0,122,255);
+        }
+        #mar{
+            margin-top: -25px;
+        }
+        button{
+            border: 1;
+        padding: 15px 40px 15px 40px;
+        border-radius: 10px;
+        color: rgb(0,122,255);
+        }
+        button:hover{
+            background-color: rgb(0,122,255) ;
+            color: white;
+            cursor: pointer;
+        }
+         /* Medium screens */
+      @media only screen and (min-width: 421px) and (max-width: 780px){
+        .container>div{
+            flex-direction: column;
+            padding: 20px;
+           
+        }
+        .container{
+            grid-template-rows: auto;
+            grid-template-columns: repeat(2,1fr);
+        }
+      }
+       /* small screens */
+       @media only screen and (min-width: 70px) and (max-width: 420px){
+        .container>div{
+            flex-direction: column;
+            padding: 20px;
+           
+        }
+        .container{
+            grid-template-rows: auto;
+            grid-template-columns: repeat(1,1fr);
+        }
+       }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>Choose a plan that right for your business</h1>
+    <p>we collect reviews from our users so you can get an honest opnion of what an experiance with our website are really like</p>
+    </div>
+    <div class="container">
+        <div>
+            <div>
+                <h2>Starter Plan</h2>
+                <h1 id="green">Free</h1>
+                <p id="mar">Per month</p>
+            </div>
+            <p>we collect reviews from our users so you can get an honest opnion of what an experiance with our website are really like </p>
+            <button>Start now</button>
+        </div>
+        <div>
+            <div>
+                <h2>Starter Plan</h2>
+                <h1 id="orange">$39.00</h1>
+                <p id="mar">Per month</p>
+            </div>
+            <p>we collect reviews from our users so you can get an honest opnion of what an experiance with our website are really like </p>
+            <button>Start now</button>
+        </div>
+        <div>
+            <div>
+                <h2>Starter Plan</h2>
+                <h1 id="blue">$59.00</h1>
+                <p id="mar">Per month</p>
+            </div>
+            <p>we collect reviews from our users so you can get an honest opnion of what an experiance with our website are really like </p>
+            <button>Start now</button>
+        </div>
+    </div>
+</body>
+</html>
